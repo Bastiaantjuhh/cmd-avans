@@ -1,0 +1,19 @@
+/* Buttons */
+
+.button, button {
+    border-radius: $borderRadius;
+    background-color: $greenLight;
+
+    color: $black;
+    padding: 20px;
+    display: block;
+
+    text-decoration: none;;
+    text-align: center;
+    font-size: 20px;
+
+    &:hover {
+        background-color: $greenDark;
+        color: $white;
+    }
+}

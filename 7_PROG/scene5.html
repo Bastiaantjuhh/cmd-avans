@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <!-- SEO title -->
+    <title>PROG Scene 5 - Bastiaan de Hart</title>
+    <!-- Globale Stylesheet -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <!-- Scene specifieke stylesheet -->
+    <link rel="stylesheet" href="./assets/css/scene5.css">
+</head>
+<body>
+    <!-- 
+    Grafische layers, volgoorde bepaald door Z-index in CSS.
+    Alle afbeeldingen zijn in moderne WebP standaard en maximaal
+    compressed. Zo is de hele website (ex P5 framework) max 187 KB. 
+    -->
+    <img class="layer_grass" src="./assets/img/scene5/grass.webp" alt="Gras">
+    <img class="layer_path" src="./assets/img/scene5/path.webp" alt="Looppad">
+    <img class="layer_building" src="./assets/img/scene5/building.webp" alt="Gebouw">
+    
+    <!-- Paal met bordjes -->
+    <img class="layer_pole" src="./assets/img/scene5/pole.webp" alt="Paal">
+    <img class="layer_sign" src="./assets/img/scene5/sign.webp" alt="Bordje">
+
+    <!-- De teksten bovenin het scherm -->
+    <div class="text-dialog">
+        <p class="text-line-one">Je bent nu in het jaar 2025. Je bent dus afgereisd naar het heden.</p>
+    </div>
+    <div class="text-dialog">
+        <p class="text-line-two">Dat betekent dat je je reis hebt volbracht.</p>
+    </div>
+
+    <!-- Javascrypt voor de wolken, deze worden met P5 gegenereerd -->
+    <script src="./assets/js/vendor/p5.min.js" defer></script>
+    <script src="./assets/js/clouds.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+/* Layout: Footer */
+
+footer {
+
+    text-align: center;
+    padding-top: 40px;
+
+    & p {
+        color: $black;
+        font-size: ( $fontSizeDefault - 4px );
+        font-weight: 700;
+    }
+} 

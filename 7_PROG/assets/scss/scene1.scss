@@ -1,0 +1,99 @@
+/* Layers moeten exact juiste volgorde hebben. */
+.layer {
+
+    &_lake {
+        z-index: 1;
+    }
+
+    &_instructions {
+        z-index: 2;
+    }
+}
+
+/* De style en animatie van de button */
+button {
+    padding-bottom: 8%;
+    border: none;
+    background: none;
+    opacity: 0;
+    margin: auto;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+    /* DOCS: https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode */
+    animation-name: fadeIn;
+    animation-fill-mode: forwards;
+    animation-delay: 15s;
+    animation-duration: 3s;
+
+    &:hover {
+        /* Klein hover effect zodat het duidelijk is waar geklikt moet worden */
+        text-shadow: #000000 1px 0 10px;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*Hier animeer ik de positie van het zwaard*/
+.magicwand_container {
+    z-index: 1000;
+    opacity: 0;
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    margin: auto;
+    animation-name: magicwandThrow;
+    animation-delay: 10s;
+    animation-duration: 3s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+
+/*Hier animeer ik de rotation van het zwaard*/
+.magicwand {
+    margin-top: -70px;
+    animation-name: magicwandRotate;
+    animation-delay: 10s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    /* DOCS: https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate */
+    transform: rotate(-300deg);
+}
+
+@keyframes magicwandThrow {
+    0% {
+        opacity: 0;
+        transform: translate(60vw, 30vh);
+    }
+    15% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: translate(30vw, 72vh);
+    }
+}
+
+@keyframes magicwandRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    90% {
+        transform: rotate(-300deg);
+    }
+}

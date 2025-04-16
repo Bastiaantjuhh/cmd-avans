@@ -1,0 +1,29 @@
+/* Fonts */
+
+h1 {
+    font-family: $fontHeadings;
+    font-weight: 100;
+    font-size: 62px;
+    text-transform: lowercase;
+}
+
+h2 {
+    font-family: $fontHeadings;
+    font-weight: 400;
+    font-size: 32px;
+    text-transform: lowercase;
+}
+
+h3 {
+    font-family: $fontHeadings;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: lowercase;
+}
+
+p {
+    font-family: $fontHeadings;
+    font-size: $fontSizeDefault;
+    font-weight: 300;
+    line-height: 1.6;
+}

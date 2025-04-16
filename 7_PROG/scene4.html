@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <!-- SEO title -->
+    <title>PROG Scene 4 - Bastiaan de Hart</title>
+    <!-- Globale Stylesheet -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <!-- Scene specifieke stylesheet -->
+    <link rel="stylesheet" href="./assets/css/scene4.css">
+</head>
+<body>
+    <!-- 
+    Grafische layers, volgoorde bepaald door Z-index in CSS.
+    Alle afbeeldingen zijn in moderne WebP standaard en maximaal
+    compressed. Zo is de hele website (ex P5 framework) max 187 KB. 
+    -->
+    <img class="layer_grass" src="./assets/img/scene4/grass.webp" alt="Gras">
+    <img class="layer_sign_pole" src="./assets/img/scene4/pole.webp" alt="Paal voor bordjes">
+
+    <!-- Twee verschillende borden, uitkomst is hetzelfde -->
+    <a href="./scene5.html">
+        <img class="layer_sign_one" src="./assets/img/scene4/delorean.webp" alt="DeLorean bordje">
+    </a>
+    <a href="./scene5.html">
+        <img class="layer_sign_two" src="./assets/img/scene4/machine.webp" alt="Tijdreis machine bordje">
+    </a>
+
+    <!-- De teksten bovenin het scherm -->
+    <div class="text-dialog">
+        <p class="text-line-one">Je bent bijna aan het einde van je lange reis.</p>
+    </div>
+    <div class="text-dialog">
+        <p class="text-line-two">Maar welke richting besluit je nu op te gaan?</p>
+    </div>
+
+    <!-- Javascrypt voor de wolken, deze worden met P5 gegenereerd -->
+    <script src="./assets/js/vendor/p5.min.js" defer></script>
+    <script src="./assets/js/clouds.js" defer></script>
+</body>
+</html>

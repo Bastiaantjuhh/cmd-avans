@@ -1,0 +1,23 @@
+$greenDark: #0B6623;
+$greenLight: #9DC183;
+$greenLightest: #D0F0C0;
+$black: #23272A;
+$white: white;
+
+$shadow: 10px 10px 10px 0px rgba(0,0,0,0.20);
+$borderRadius: 8px;
+
+$fontHeadings: 'Roboto', sans-serif;
+$fontText: 'Roboto', sans-serif;
+
+$fontSizeDefault: 16px;
+
+@import "./parts/main";
+@import "./parts/font";
+@import "./parts/buttons";
+@import "./parts/form";
+@import "./parts/layout/header";
+@import "./parts/layout/flexible";
+@import "./parts/layout/cta";
+@import "./parts/layout/footer";
+@import "./parts/media";

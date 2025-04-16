@@ -1,0 +1,68 @@
+/* Layers moeten exact juiste volgorde hebben. */
+.layer {
+
+    &_boat {
+        z-index: 1;
+        animation: seaWaves 3s ease-in-out infinite;
+    
+        &_dock {
+            z-index: 2;
+        }
+    }
+}
+
+@keyframes seaWaves {
+    0%, 100% {
+        transform: rotate(-0.5deg);
+    }
+    50% {
+        transform: rotate(0.5deg);
+    }
+}
+
+/* CSS van de boot knop */
+.boat_button {
+    z-index: 1000;
+    opacity: 0;
+    width: 30%;
+    height: 30%;
+    left: 52%;
+    bottom: 6%;
+    position: absolute;
+    margin: auto;
+    animation-name: fadeIn;
+    animation-fill-mode: forwards;
+    animation-delay: 12s;
+    animation-duration: 3s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+button {
+    padding-bottom: 3%;
+    border: none;
+    background: none;
+    margin: auto;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+
+    &:hover {
+        text-shadow: #000000 1px 0 10px;
+    }
+}
+
+/* Personae positie bepaling. In main.css wordt walk & stand bepaald */
+#my_person {
+    z-index: 3;
+    position: absolute;
+    left: 0;
+    bottom: 10%;
+}

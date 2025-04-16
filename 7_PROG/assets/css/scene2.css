@@ -1,0 +1,32 @@
+/* Layers moeten exact juiste volgorde hebben. */
+.layer_forest {
+  z-index: 1;
+  animation: wind 5s ease-in-out infinite alternate;
+}
+.layer_forest_ground {
+  z-index: 2;
+}
+.layer_house {
+  z-index: 3;
+}
+.layer_instructions {
+  z-index: 4;
+}
+
+/* Kleine rotatie effect voro de bomen, zodat hetl ijkt te waaien */
+@keyframes wind {
+  0% {
+    transform: rotate(-1deg);
+  }
+  100% {
+    transform: rotate(1deg);
+  }
+}
+/* Dit is het personage, deze wordt bestuurd door JS code */
+#my_person {
+  z-index: 5;
+  position: absolute;
+  bottom: 6%;
+  left: 0;
+  margin-left: 400px;
+}

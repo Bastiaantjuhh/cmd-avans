@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <!-- SEO title -->
+    <title>PROG Scene 1 - Bastiaan de Hart</title>
+    <!-- Globale Stylesheet -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <!-- Scene specifieke stylesheet -->
+    <link rel="stylesheet" href="./assets/css/scene1.css">
+</head>
+<body>
+    <!-- 
+    Grafische layers, volgoorde bepaald door Z-index in CSS.
+    Alle afbeeldingen zijn in moderne WebP standaard en maximaal
+    compressed. Zo is de hele website (ex P5 framework) max 187 KB. 
+    -->
+    <img class="layer_lake" src="./assets/img/scene1/lake.webp" alt="Vijver met gras">
+    <img class="layer_instructions" src="./assets/img/scene1/instructions.webp" alt="Instructies">
+
+    <!-- Toverstaf, deze word geanimeerd met CSS -->
+    <div class="magicwand_container">
+        <!-- Weergeven als hyperlink -->
+        <a href="./scene2.html"><button>Begin het avontuur</button></a>
+        <img class="magicwand" src="./assets/img/scene1/magicwand.webp" alt="Toverstaf">
+    </div>
+
+    <!-- De teksten bovenin het scherm -->
+    <div class="text-dialog">
+        <p class="text-line-one">Je bent in een verleden ver ver ver weg van het heden.</p>
+    </div>
+    <div class="text-dialog">
+        <p class="text-line-two">Pak de toverstaf en reis naar het heden.</p>
+    </div>
+
+    <!-- Javascrypt voor de wolken, deze worden met P5 gegenereerd -->
+    <script src="./assets/js/vendor/p5.min.js" defer></script>
+    <script src="./assets/js/clouds.js" defer></script>
+</body>
+</html>

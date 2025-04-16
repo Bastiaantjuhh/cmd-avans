@@ -1,0 +1,127 @@
+/*
+ * Omdat ik graag volgens het DRY principe (Don't Repeat Yourself) heb ik de CSS
+ * ook zo dynamisch mogenlijk ingestoken en herhalende elementen in een main.css
+ * bestand gestopt
+ *
+ */
+body {
+  padding: 0px;
+  text-align: center;
+  overflow: hidden;
+  font-size: 32px;
+  font-family: Arial, Helvetica, sans-serif;
+  /* Achtergrond van de lucht */
+  background: linear-gradient(to bottom, #6fd1f7, #ecfdff);
+  height: 100vh;
+}
+
+/* Ik wil iedere afbeelding selecteren, behalve elementen die kleiner moeten zijn dan Full-Screen gevuld */
+img:not(.magicwand, .magicwand_container, .layer_sign_one, .layer_sign_two) {
+  min-height: 100%;
+  min-width: 1079px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+.text-dialog {
+  /* Z-index hoog want text moet ALTIJD op voorgrond. */
+  z-index: 999;
+  position: absolute;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  color: #000000;
+}
+.text-line-one {
+  animation-name: fadeOut;
+  /* DOCS: https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode */
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-delay: 6s;
+}
+.text-line-two {
+  padding-top: -10%;
+  opacity: 0;
+  animation-name: fadeOut2;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-delay: 6s;
+}
+
+/* Keyframe is voor de teksten, deze hebben een fade-in & fade-out effect */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.cloud {
+  /* Clouds zijn voor het wolken canvas dat door P5 wordt gemaakt */
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 150px;
+  height: 80px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+.cloud::before {
+  /* Ronding voor "main" wolk */
+  width: 100px;
+  height: 100px;
+  top: -30px;
+  left: 40px;
+}
+.cloud::after {
+  /* Ronding na de "main" wolk */
+  width: 80px;
+  height: 80px;
+  top: -20px;
+  left: -30px;
+}
+
+/*
+ * Personage komt in 2 annimaties voor. de stand en walk zijn hetzelfde
+ * daarom besloten om deze globaal te defineren om niet te hoeven herhalen.
+ * Als personage stil staat heeft deze de class .stand, beweging .walk met
+ * een Loop animatie
+ *
+ */
+.stand {
+  width: 186px;
+  height: 349px;
+  /* Bron afbeelding: https://sergibote.weebly.com/uploads/5/5/4/1/55416621/6157130_orig.png */
+  background: url(../img/global/standing.webp);
+}
+
+.walk {
+  width: 185.25px;
+  height: 349px;
+  /* Bron afbeelding: https://sergibote.weebly.com/uploads/5/5/4/1/55416621/6157130_orig.png */
+  background: url(../img/global/walking.webp);
+  /* DOCS: https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function */
+  animation: walking 1s steps(8) infinite;
+}
+
+@keyframes walking {
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position: -1482px;
+  }
+}

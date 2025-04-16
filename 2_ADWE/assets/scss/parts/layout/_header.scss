@@ -1,0 +1,73 @@
+/* Layout: Header */
+
+header {
+
+    background-color: $greenDark;
+    box-shadow: $shadow;
+
+    padding: 20px;
+
+    & #top {
+
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+  
+        & > div{
+            padding: 0px;
+        }
+
+        & #logo {
+            width: 128px;
+        }
+
+        & #back a img, & #map a img {
+            width: 40px;
+        }
+    }
+
+    & #breadcrumbs {
+
+        & ol {
+
+            list-style: none;
+            font-size: ($fontSizeDefault - 2px);
+            padding-left: 0;
+            color: $white;
+        
+            & li {
+                display: inline;
+                text-transform: lowercase;
+        
+                & a {
+                    text-decoration: underline;
+                    color: $white;
+                    
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        
+            & li+li:before {
+                padding: 6px;
+                content: ">";
+            }
+        }
+    }
+
+    & #intro {
+
+        & h1, & p {
+            color: $white;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        & p {
+            font-weight: 100;
+        }
+
+        padding: 20px 0px 40px 0px;
+    }
+}

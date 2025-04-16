@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <!-- SEO title -->
+    <title>PROG Scene 2 - Bastiaan de Hart</title>
+    <!-- Globale Stylesheet -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <!-- Scene specifieke stylesheet -->
+    <link rel="stylesheet" href="./assets/css/scene2.css">
+</head>
+<body>
+    <!-- 
+    Grafische layers, volgoorde bepaald door Z-index in CSS.
+    Alle afbeeldingen zijn in moderne WebP standaard en maximaal
+    compressed. Zo is de hele website (ex P5 framework) max 187 KB. 
+    -->
+    <img class="layer_instructions" src="./assets/img/scene2/instructions.webp" alt="Instructies">
+    <img class="layer_house" src="./assets/img/scene2/house.webp" alt="House">
+    <img class="layer_forest" src="./assets/img/scene2/forest.webp" alt="Bos met bomen">
+    <img class="layer_forest_ground" src="./assets/img/scene2/forest_ground.webp" alt="Grond">
+
+    <!-- Persoonage, standaard ingesteld als stilstaand (stand) -->
+    <div id="my_person" class="stand"></div>
+
+    <!-- Scene specifieke JS -->
+    <script src="./assets/js/scene2.js" defer></script>
+    
+    <!-- Javascrypt voor de wolken, deze worden met P5 gegenereerd -->
+    <script src="./assets/js/vendor/p5.min.js" defer></script>
+    <script src="./assets/js/clouds.js" defer></script>
+</body>
+</html>

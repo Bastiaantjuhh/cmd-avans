@@ -1,0 +1,24 @@
+/* Main */
+
+body {
+
+    font-family: $fontText;
+    color: $black;
+    
+    padding: 0px;
+    margin: 0px;
+
+    background-color: white;
+
+    background-image: url("../img/layout/achtergrond.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+
+header > section, .flexible, #call-to-action, footer {
+    max-width: 1080px; 
+    margin: 0 auto !important; 
+    float: none !important; 
+}

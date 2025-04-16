@@ -1,0 +1,26 @@
+/* Layers moeten exact juiste volgorde hebben. */
+.layer_grass {
+  z-index: 1;
+}
+.layer_path {
+  z-index: 2;
+}
+.layer_building {
+  z-index: 3;
+}
+.layer_pole {
+  z-index: 4;
+}
+.layer_sign {
+  z-index: 5;
+  animation: windSign 2s ease-in-out infinite alternate;
+}
+
+@keyframes windSign {
+  0%, 100% {
+    transform: rotate(-0.5deg);
+  }
+  50% {
+    transform: rotate(0.5deg);
+  }
+}

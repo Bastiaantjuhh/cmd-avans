@@ -1,0 +1,104 @@
+// Bootstrap framework (Download Sass vanaf website)
+@import "./bootstrap/_bootstrap";
+
+/* MAIN.SCSS */
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f8f9fa;
+	color: #333;
+	margin: 0;
+	padding: 0;
+}
+
+/* Stijl voor navigatie */
+#main-nav {
+	width: 100%;
+	z-index: 1000;
+	position: fixed;
+	top: 0px; /* Mobiel: navigatie bovenaan */
+
+    & p {
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    & .navbar-toggler {
+        border: none;
+    }
+}
+
+/* Verplaats de navigatie naar onderaan op desktop */
+@media (min-width: 992px) {
+	#main-nav {
+		top: auto; /* Verwijder top positioning */
+		bottom: 0px; /* Desktop: navigatie onderaan */
+	}
+}
+
+/* Layout voor de content */
+main {
+	margin-top: 60px; /* Ruimte voor de navigatiebalk op mobiel */
+}
+
+/* Drie kolommen layout */
+.row.mb-4 {
+	display: flex;
+	gap: 8px;
+}
+
+/* Selecteer alle DIVs binnen de USP containers */
+.usp > div {
+	flex: 1;
+	background: #dc3545;
+	color: white;
+	padding: 16px;
+	border: 1px solid;
+	border-radius: 8px;
+	text-align: center;
+	font-weight: bold;
+}
+
+/* Takenlijst stijl */
+#task-list li {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 12px 16px;
+	background: #fff;
+	border: 1px solid #dc3545;
+	color: #dc3545;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+/* Stijl voor doorgestreepte taken */
+.completed {
+	text-decoration: line-through;
+	color: #999;
+}
+
+/* Stijl voor verwijderknop */
+.toggle-btn {
+	background: none;
+	border: none;
+	color: #dc3545;
+	font-size: 19px;
+	line-height: 16px;
+	cursor: pointer;
+
+    &:hover {
+        color: #b02a37;
+    }
+}
+
+/* Buttons */
+#notify-btn, #share-btn {
+	width: 48%; /* Plus/minus de helft */
+}
+
+/* Desktop styling voor navigatie */
+@media (min-width: 992px) {
+	main {
+		padding-bottom: 60px;
+	}
+}

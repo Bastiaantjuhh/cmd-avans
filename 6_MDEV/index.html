@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- Title tag -->
+    <title>TODO App</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <!-- Kleurtje -->
+    <meta name="theme-color" content="#0d6efd">
+    <!-- HTML viewport (mobile) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Description tag -->
+    <meta name="description" content="Makkelijk te gebruiken TODO lijst Pwa">
+    <!-- Manifest voor PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <!-- Mijn JS code -->
+    <script src="/assets/js/main.js" defer></script>
+    <!-- 
+      Alles zit gebundeld in 1 CSS bestand.
+      Ik maak gebruik van Bootstrap + eigen CSS.
+      In /assets/scss/main.scss in de ruwe versie te zien.
+      In /assets/css/main.min.css is de gebundelde CSS te zien
+
+      BRON: https://getbootstrap.com/docs/5.3/getting-started/download/
+    -->
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+  </head>
+  <body>
+    <!-- Enkele Navigatiebalk -->
+    <nav id="main-nav" class="navbar navbar-dark bg-primary">
+      <div class="container-fluid d-flex justify-content-center">
+        <!-- Gecentreerde titel -->
+        <p class="navbar-brand mx-auto text-center">TODO APP</p>
+      </div>
+    </nav>
+
+    <!-- main content -->
+    <main class="container my-4 pt-5">
+      <!-- Drie kolommen layout met USP's. USP's zelf met emoji's -->
+      <div class="row pt-4 mb-4 usp">
+        <div class="col-4">✅ Eenvoudig te gebruiken</div>
+        <div class="col-4">✅ Gratis</div>
+        <div class="col-4">✅ Mobiel te gebruiken</div>
+      </div>
+
+      <!-- Content -->
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+          <p>Welkom bij je persoonlijke takenlijst. Deze app helpt je om je dagelijkse taken georganiseerd te houden. Voeg taken toe, verwijder ze wanneer ze voltooid zijn, en sla ze veilig op met LocalStorage zodat ze altijd beschikbaar blijven. Ontvang handige notificaties bij nieuwe taken, deel je lijst met anderen via de Web Share API, en bekijk je locatie voor extra context. Met offline ondersteuning en moderne functies zoals trillingsfeedback en geolocatie is deze app ontworpen om jouw productiviteit te verbeteren, waar je ook bent. Begin vandaag nog en ervaar hoe eenvoudig takenbeheer kan zijn!</p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+          <!-- Input en knoppen voor taken -->
+          <div class="input-group mb-3">
+            <input type="text" id="task-input" class="form-control" placeholder="Voeg een nieuwe taak toe...">
+            <button id="add-task-btn" class="btn btn-primary">Toevoegen</button>
+          </div>
+
+          <!-- Knoppen voor notificatie en delen -->
+          <div class="d-flex justify-content-between mb-3">
+            <button id="notify-btn" class="btn btn-outline-secondary flex-fill me-2">Stuur Notificatie</button>
+            <button id="share-btn" class="btn btn-outline-success flex-fill">Deel Takenlijst</button>
+          </div>
+
+          <!-- Geolocatie informatie -->
+          <p id="geolocation-info" class="text-muted text-center mb-3">Locatie wordt geladen...</p>
+
+          <!-- Lijst van taken -->
+          <ul id="task-list" class="list-group"></ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

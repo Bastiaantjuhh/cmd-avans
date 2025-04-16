@@ -1,0 +1,42 @@
+/* Layers moeten exact juiste volgorde hebben. */
+.layer {
+
+    &_grass {
+        z-index: 1;
+    }
+
+    &_sign_pole {
+        z-index: 2;
+    }
+
+    &_sign_two {
+        z-index: 3;
+        width: 100%;
+        height: auto;
+        padding-left: 30px;
+    }
+    
+    &_sign_one {
+        z-index: 3;
+        width: 100%;
+        height: auto;
+        padding-top: 70px;
+    }
+}
+
+/* Hoogste Z-index want anders niet klikbaar... */
+a {
+    z-index: 1000;
+    width: 12%;
+    top: 58%;
+    left: 62%;
+    position: absolute;
+    cursor: pointer;
+    border: none;
+    background: none;
+    transition: transform 1s ease-in-out;
+
+    &:hover {
+        transform: rotate(6deg);
+    }
+}

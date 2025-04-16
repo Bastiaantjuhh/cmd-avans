@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <!-- SEO title -->
+    <title>PROG Scene 3 - Bastiaan de Hart</title>
+    <!-- Globale Stylesheet -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <!-- Scene specifieke stylesheet -->
+    <link rel="stylesheet" href="./assets/css/scene3.css">
+</head>
+<body>
+    <!-- 
+    Grafische layers, volgoorde bepaald door Z-index in CSS.
+    Alle afbeeldingen zijn in moderne WebP standaard en maximaal
+    compressed. Zo is de hele website (ex P5 framework) max 187 KB. 
+    -->
+    <img class="layer_boat" src="./assets/img/scene3/boat_water.webp" alt="Bootje">
+    <img class="layer_boat_dock" src="./assets/img/scene3/boat_dock.webp" alt="Boot dock">
+
+    <!-- Boot weergave -->
+    <div class="boat_button">
+        <!-- Weergeven als hyperlink -->
+        <a href="./scene4.html"><button>Spring in de boot</button></a>
+    </div>
+
+    <!-- Personage, deze loopt automtish daarom class op WALK ingestels -->
+    <div id="my_person" class="walk"></div>
+
+    <!-- Scene specifieke JS -->
+    <script src="./assets/js/scene3.js" defer></script>
+
+    <!-- Javascrypt voor de wolken, deze worden met P5 gegenereerd -->
+    <script src="./assets/js/vendor/p5.min.js" defer></script>
+    <script src="./assets/js/clouds.js" defer></script>
+</body>
+</html>

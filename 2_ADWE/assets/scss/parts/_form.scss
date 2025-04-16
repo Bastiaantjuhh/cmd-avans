@@ -1,0 +1,15 @@
+input, textarea, button {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+
+    border: 2px solid $greenLight;
+    border-radius: $borderRadius;
+
+    /* 
+     * Fix voor issue waar het layout kapot gaat als je de "textarea" reseized.
+     * LINK: https://stackoverflow.com/questions/9382245/how-to-disable-textarea-resizing
+     */
+    resize: vertical;
+}

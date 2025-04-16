@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO -->
+    <title>Contact | CMD TechLab</title>
+    <meta name="description" content="Ontdek de grenzen van creativiteit en technologie in het CMD Techlab. Hier komen innovatieve projecten tot leven. Voor vragen, reserveringen of meer informatie lees je hier.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header>
+        <section id="top">
+            <div id="back">
+                <a tabindex="1" href="./index.html">
+                    <img src="./assets/img/layout/pijl.svg" alt="Pijl terug">
+                </a>
+            </div>
+            <div id="logo">
+                <a href="./index.html">
+                    <img src="./assets/img/layout/logo.svg" alt="CMD TechLab logo">
+                </a>
+            </div>
+            <div id="map">
+                <a href="https://www.google.com/maps/dir//Werkplaats+CMD,+Onderwijsboulevard+215,+5223+DE+'s-Hertogenbosch">
+                    <img src="./assets/img/layout/kaart.svg" alt="Kaart">
+                </a>
+            </div>
+        </section>
+
+        <section id="breadcrumbs">
+            <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="./index.html">
+                        <span itemprop="name">Homepagina</span>
+                    </a>
+                    <meta itemprop="position" content="1">
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <span itemprop="name">Contact</span>
+                    <meta itemprop="position" content="2">
+                </li>
+            </ol>
+        </section>
+
+        <section id="intro">
+            <h1>Contact</h1>
+            <p>Ontdek de grenzen van creativiteit en technologie in het CMD Techlab. Hier komen innovatieve projecten tot leven. Voor vragen, reserveringen of meer informatie lees je hier.</p>
+        </section>
+    </header>
+
+    <main>
+        <article class="flexible mobile-reverse">
+            <section>
+                <h2>Contactformulier</h2>
+    
+                <form method="post" action="#">
+                    <label for="naam" class="formbuilder-text-label">Naam</label>
+                    <input type="text" placeholder="naam" name="naam" id="naam" required="required">
+    
+                    <label for="e-mail" class="formbuilder-text-label">E-mail</label>
+                    <input type="email" placeholder="E-mail" name="e-mail" id="e-mail" required="required">
+    
+                    <label for="telefoon" class="formbuilder-text-label">Telefoon nummer</label>
+                    <input type="tel" placeholder="Telefoon nummer" name="telefoon" id="telefoon">
+             
+                    <label for="vraag" class="formbuilder-textarea-label">Vraag of opmerking</label>
+                    <textarea placeholder="Vraag of opmerking" name="vraag" id="vraag" required="required"></textarea>
+        
+                    <button type="submit" name="verstuur" id="verstuur">Verstuur</button>
+                </form>
+            
+            </section>
+            <section>
+                <p>Contact opnemen is eenvoudig. Vul het onderstaande formulier in met je naam, contactgegevens en bericht, en wij zorgen ervoor dat je snel de informatie ontvangt waar je naar op zoek bent. Laten we samen bouwen aan de toekomst van creativiteit en technologie!</p>
+            </section>
+        </article>
+    </main>
+
+    <section id="call-to-action">
+        <p>Altijd op de hoogte blijven van het laatste nieuws? Volg ons op de socials.</p>
+
+        <div id="socials">
+            <a target="_blank" href="https://www.facebook.com/avanscmd"><img src="./assets/img/socials/facebook.svg" alt="Facebook logo"></a>
+            <a target="_blank" href="https://www.instagram.com/cmd_denbosch"><img src="./assets/img/socials/instagram.svg" alt="Instagram logo"></a>
+            <a target="_blank" href="https://twitter.com/AvansHogeschool"><img src="./assets/img/socials/twitter.svg" alt="Twitter logo"></a>
+            <a target="_blank" href="https://www.tiktok.com/@avanshogeschool"><img src="./assets/img/socials/tiktok.svg" alt="TikTok logo"></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright &copy; <span id="year"></span> CMD Techlab.</p>
+    </footer>
+
+    <!-- Javascript -->
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

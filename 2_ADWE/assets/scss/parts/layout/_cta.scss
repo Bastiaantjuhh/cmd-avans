@@ -1,0 +1,37 @@
+/* Layout: CTA (Call-To-Action) */
+
+#call-to-action {
+
+    text-align: center;
+    padding: 10px 0 30px 0;
+    margin: 20px;
+    background-color: $greenLight;
+    box-shadow: $shadow;
+    border-radius: $borderRadius;
+
+    & p {
+        font-size: 30px;
+        padding: 8px;
+        margin: 30px;
+        font-weight: 400;
+    }
+    
+    & #socials {
+        & img {
+            width: 64px;
+        }
+
+        & img:hover {
+
+            /*
+             * Sinds achtergrond kleur wijzigen niet werkt, kleine filter
+             * LINK: https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/invert 
+             */
+            filter: invert(1);
+        }
+        
+        & a {
+            padding: 0 20px 0 20px;
+        }
+    }
+}
